@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Simple SQS Queue
+
+Resources:
+  MyQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: MySimpleQueue
+      VisibilityTimeout: 30  # 秒。メッセージが処理されるまで見えなくなる時間（任意設定）
